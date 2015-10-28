@@ -4,14 +4,14 @@ FROM ubuntu:14.04
 MAINTAINER shailen.werk@gmail.com
 
 RUN sudo apt-get update
-RUN sudo apt-get install -y build-essential libssl-dev curl
+RUN sudo apt-get install build-essential libssl-dev
 
 RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
 RUN sudo apt-get update
-RUN sudo apt-get install -y nodejs
+RUN sudo apt-get install nodejs
 
-%RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
-RUN . ~/.profile
+RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
+RUN source ~/.profile
 
 # Copy app to /src
 COPY . /src
