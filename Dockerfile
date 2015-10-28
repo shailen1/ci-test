@@ -10,7 +10,7 @@ RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
 RUN sudo apt-get update
 RUN sudo apt-get install -y nodejs
 
-RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
+%RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
 RUN . ~/.profile
 
 # Copy app to /src
